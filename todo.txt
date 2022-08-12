@@ -1,0 +1,7 @@
+link database to user id on join and username input////
+username input -> invalids and valid ///
+make actual game bit ////
+top bar: day count////, share///(needs link), leaderboard///, info////, locater////
+mobile support///
+host////
+add more server workers if big

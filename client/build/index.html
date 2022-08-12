@@ -1,0 +1,109 @@
+<!DOCTYPE html><html><head>
+    <title>SpacebarMMO</title>
+    <link rel="icon" type="image/x-icon" href="./icons/flavicon.png">
+    <link rel="stylesheet" href="main.css">
+    <meta name="application-name" content="SpacebarMMO">
+    <meta name="author" content="Lukas Rodda">
+    <meta name="keywords" content="mmo, game,">
+    <meta name="description" content="A game where you press spacebar and watch numbers go up">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="SpacebarMMO">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spacebarmmo.com/">
+    <meta property="og:image" content="https://spacebarmmo.com/icons/preview.png">
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    
+    <div class="bar">
+      <span class="dayspan">
+      <div class="day" id="day" title="Highest feasable score is"> Day:0</div></span>
+      <div class="logo" id="logo">
+        <img src="./icons/logo.png" class="logoicon" alt="Logo"></div>
+      <button type="button" class="barbutton" id="locate" title="Go to your square">
+        <img src="./icons/locate.png" class="icon" alt="locate">
+      </button>
+      <button type="button" class="barbutton" id="share" title="Share">
+        <img src="./icons/share.png" class="icon" alt="Share">
+        <div class="sharepopup" id="sharepopup"></div>
+      </button>
+      <button type="button" class="barbutton" id="leaderboard" title="Leaderboard">
+        <img src="./icons/leaderboard.png" class="icon" alt="Leaderboard">
+      </button>
+      <button type="button" class="barbutton" id="info" title="Info">
+        <img src="./icons/info.png" class="icon" alt="Info">
+      </button>
+    </div>
+
+    <div class="leaderboarddrop" id="leaderdrop">
+      <span class="leadertitle">Top 5 players:
+        <button type="button" class="close" id="leaderclose">X</button>
+      </span>
+      <button type="button" class="leaderbtn" id="leaderbtn0">
+        <div id="topname0"></div> <hr class="ldrhr"> <div id="topexp0"></div>
+      </button>
+      <button type="button" class="leaderbtn" id="leaderbtn1">
+        <div id="topname1"></div> <hr class="ldrhr"> <div id="topexp1"></div>
+      </button>
+      <button type="button" class="leaderbtn" id="leaderbtn2">
+        <div id="topname2"></div> <hr class="ldrhr"> <div id="topexp2"></div>
+      </button>
+      <button type="button" class="leaderbtn" id="leaderbtn3">
+        <div id="topname3"></div> <hr class="ldrhr"> <div id="topexp3"></div>
+      </button>
+      <button type="button" class="leaderbtn" id="leaderbtn4">
+        <div id="topname4"></div> <hr class="ldrhr"> <div id="topexp4"></div>
+      </button>
+    </div>
+      
+    <div class="infodrop" id="infodrop">
+      <span class="leadertitle">Info:
+        <button type="button" class="close" id="infoclose">X</button>
+      </span>
+      <span class="infocontent">
+       Made by Lukas Rodda aka <span style="font-weight:550"> TurtleRiot</span>.
+       <hr class="infohr">
+       <a href="https://audius.co/turtleriot" title="https://audius.co/turtleriot">Check out my music.</a>
+       <hr class="infohr">
+       <p>I made this with very little coding experience so if you find any bugs 
+         or want to help message me on discord at TurtleRiot#7524</p>
+         <hr class="infohr">
+       <p>This game uses your local storage so don't clear that if you want to keep your progress.</p>
+       <hr class="infohr">
+       <button type="button" class="togglespace" id="togglespace">Click to toggle on screen spacebar.</button>
+      </span>
+
+    </div>
+
+    <div class="hint" id="hint">
+      Hint: press the spacebar key or the on-screen spacebar button.
+    </div>
+
+    <div class="page" id="page">
+      
+      <script type="text/javascript" src="./scroll.js"></script>
+    </div>
+    
+
+
+      <div class="popup" id="login-popup">
+        <div class="text">Welcome.</div>
+        <p class="popupcontent">
+          This is an mmo where all you have to do is hit spacebar.
+          At 200 million exp you get <span style="color: gold; font-weight: bold;">gold!</span>
+        </p>
+        <form id="login" onsubmit="validate()" method="post">
+        <div class="input">
+          <label>Enter your Username:</label>
+          <input class="username" type="text" maxlength="16" id="username">
+        </div>
+          <button class="button" type="submit">Go</button>
+        </form>
+        <div class="error" id="error"></div>
+      </div>  
+      
+      <button type="button" class="mobilespace" id="mobilespace">Spacebar</button>
+
+      
+  
+</body></html>
