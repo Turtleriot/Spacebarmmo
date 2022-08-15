@@ -6,7 +6,7 @@ const app = express()
 app.use(express.static('build'));
 
 const port = 3000;
-const server = app.listen(port);
+const server = app.listen(process.env.PORT || port);
 console.log(`Server listening on port ${port}`);
 
 const io = socketio(server);
